@@ -1,4 +1,5 @@
 import React from "react";
+import { div } from "./Math";
 
 class Counter extends React.Component {
     constructor(props) {
@@ -30,12 +31,24 @@ class Counter extends React.Component {
         
     }
 
-    render() {
+    /* render() {
         const h2 = React.createElement('h2', {}, this.state.count);
         const buttonMinus = React.createElement('button', {onClick: () => {this.decrement()}}, '-');
         const button = React.createElement('button', {onClick: () => {this.increment()}}, '+');
         // const div = React.createElement('div', {}, h2, button);
         return React.createElement(React.Fragment, {}, h2, buttonMinus, button);
+    }
+    */
+
+    //JSX
+    render() {
+        return(
+            <React.Fragment>
+                <h2>{this.state.count}</h2>
+                <button onClick={() => {this.decrement()}}>-</button>
+                <button onClick={() => {this.increment()}}>+</button>
+            </React.Fragment>
+        )  
     }
 }
 

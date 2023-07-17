@@ -8,5 +8,9 @@ console.log(MyMath);
 
 const div = document.querySelector('#root');
 
-const counterComponent = React.createElement(Counter);
-ReactDOM.render(counterComponent, div);
+// const counterComponent = React.createElement(Counter);
+
+// JSX
+// const counterComponent = <Counter />
+
+ReactDOM.render(<Counter />, div);
